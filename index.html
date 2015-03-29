@@ -68,7 +68,7 @@
     			}
     			total++;
 
-    			$('.score').text('Score: ' + score + ' out of ' + total + ' (' + (score / total * 100) + '%)');
+    			$('.score').text('Score: ' + score + ' out of ' + total + ' (' + Math.round((score / total * 100)) + '%)');
     			paintButtons();
 				});
 
