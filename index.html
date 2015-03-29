@@ -67,7 +67,7 @@
     				score++;
     			}
     			total++;
-
+    			$(this).css("background-color","#FF0000");
     			$('.score').text('Score: ' + score + ' out of ' + total + ' (' + Math.round((score / total * 100)) + '%)');
     			paintButtons();
 				});
