@@ -1,4 +1,5 @@
-var photos = [
+var totalRecall = {};
+totalRecall.data = [
 ["Ansel Rosenberg","http://cdn.defi.co/tr/scaled/ansel_rosenberg.jpg"],
 ["Frank Bowers","http://cdn.defi.co/tr/scaled/frank_bowers.jpg"],
 ["Kyle Shockey","http://cdn.defi.co/tr/scaled/kyle_shockey.jpg"],
