@@ -7,26 +7,30 @@
               var score = 0, total = 0;
 
               function newPrompt(){
-                var person = getRandomPerson();
-                $('.img-square').attr("src", person[1]);
+                var usedIndexes = [];
                 var correctIndex = Math.ceil(Math.random() * 3);
+                var person = getRandomPerson(usedIndexes);
+                $('.img-square').attr("src", person[1]);
                 $('#' + correctIndex).text(person[0]);
 
                 //cycle through the 3 buttons
+
                 for (var i = 1; i < 4; i++){
                     //make sure you don't overwrite the button with the correct answer
                     if (i !== correctIndex){
                         //populate buttons
-                        var person = getRandomPerson();
+                        var person = getRandomPerson(usedIndexes);
                         $('#' + i).text(person[0]);
                       }
                     }
                     return correctIndex;
                   };
 
-                  function getRandomPerson(){
+                  function getRandomPerson(usedIndexes){
+                    usedIndexes = usedIndexes || [];
                     var index = Math.floor((Math.random() * usableData.length));
-                    if(index !== correctIndex) {
+                    if(usedIndexes.indexOf(index) === -1) {
+                      usedIndexes.push(index);
                       return usableData[index];
                     } else {
                       return getRandomPerson();
