@@ -5,7 +5,9 @@
 
 ## Quick Start
 
-There's no need to clone down this repo in order to play! [**Click here to play Total Recall**.](http://tr.kyleshockey.com/)
+There's no need to clone down this repo in order to play! [**Click here to play Total Recall**.](http://tr.kyleshockey.com/) 
+
+The hosted version of TotalRecall is running the [most recent release](https://github.com/kyleshockey/TotalRecall/releases/latest) of TotalRecall, with a default dataset of Hack Reactor's HR26 cohort.
 
 ## Using custom images
 
