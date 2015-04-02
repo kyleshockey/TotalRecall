@@ -19,7 +19,7 @@ $( document ).ready(function() {
       //make sure you don't overwrite the button with the correct answer
       if (i !== correctIndex){
         //populate buttons
-        var person = getRandomPerson(usedIndexes);
+        var person = getRandomPersonFromData(usedIndexes);
         $('#' + i).text(person[0]);
       }
     }
@@ -27,7 +27,7 @@ $( document ).ready(function() {
   };
 
   function getRandomPerson(usedIndexes){
-    usedIndexes = usedIndexes || [];
+    // usedIndexes = usedIndexes || [];
     var index = Math.floor((Math.random() * usableData.length));
     if(usedIndexes.indexOf(index) === -1) {
       usedIndexes.push(index);
@@ -37,16 +37,41 @@ $( document ).ready(function() {
     }
   }
 
+  function getRandomPersonFromData(usedIndexes){
+    // usedIndexes = usedIndexes || [];
+    var index = Math.floor((Math.random() * totalRecall.data.length));
+    if(usedIndexes.indexOf(index) === -1) {
+      usedIndexes.push(index);
+      return totalRecall.data[index];
+    } else {
+      return getRandomPersonFromData();
+    }
+  }
   //Event handler for clicking on button. Update scores, calls paintButtons method.
   $('.btn.btn-default.btn-lg.btn-block').click(function(){
     if ($(this).attr('id') === correct.toString()){
       score++;
-      usableData.splice(usableData.indexOf(correct),1);
+      var name = $(this).text(); // string of correct person's name
+      var indexToRemove;
+      usableData.forEach(function(person, i){ // 
+        if(person[0] === name) {
+          indexToRemove = i;
+        }
+      });
+      console.log("removing " + name);
+      var removed = usableData.splice(indexToRemove,1);
+      console.log("removed: " + removed);
+      console.log("------");
+      usableData.forEach(function(person){console.log(person[0])});
     }
     total++;
     $(this).css("background-color","#FF0000");
-    $('.score').text('Score: ' + score + ' out of ' + total + ' (' + Math.round((score / total * 100)) + '%)');
+    $('.score').text(score + ' out of ' + total + ' (' + Math.round((score / total * 100)) + '%)');
     paintButtons();
+  });
+
+  $('#playAgainButton').click(function(){
+    location.reload(); // this is hacky, there's definitely a better way to do this
   });
 
   //Colors the correct button button green, disables all, shows next.
@@ -64,12 +89,22 @@ $( document ).ready(function() {
   }
 
   $('#next').click(function(){
-    correct = newPrompt();
-    for (var i = 1; i < 4; i++){
-      var button = $('#' + i);
-      $(button).css("background-color", "white");
-      $(button).prop("disabled",false);
-    }
+    if(usableData.length > 0) {
+      correct = newPrompt();
+      for (var i = 1; i < 4; i++){
+        var button = $('#' + i);
+        $(button).css("background-color", "white");
+        $(button).prop("disabled",false);
+      } 
+    } else {
+        // show end-game div
+        $('#gameplay').hide();
+        $('#endgame').show();
+        //insert the final score into the endgame div
+        $('#finalScore').text(score + ' out of ' + total + ' (' + Math.round((score / total * 100)) + '%)');
+
+
+      }
     $(this).toggle();
   });
 
