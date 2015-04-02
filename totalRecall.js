@@ -27,24 +27,22 @@ $( document ).ready(function() {
   };
 
   function getRandomPerson(usedIndexes){
-    // usedIndexes = usedIndexes || [];
     var index = Math.floor((Math.random() * usableData.length));
     if(usedIndexes.indexOf(index) === -1) {
       usedIndexes.push(index);
       return usableData[index];
     } else {
-      return getRandomPerson();
+      return getRandomPerson(usedIndexes);
     }
   }
 
   function getRandomPersonFromData(usedIndexes){
-    // usedIndexes = usedIndexes || [];
     var index = Math.floor((Math.random() * totalRecall.data.length));
     if(usedIndexes.indexOf(index) === -1) {
       usedIndexes.push(index);
       return totalRecall.data[index];
     } else {
-      return getRandomPersonFromData();
+      return getRandomPersonFromData(usedIndexes);
     }
   }
   //Event handler for clicking on button. Update scores, calls paintButtons method.
@@ -54,15 +52,13 @@ $( document ).ready(function() {
       var name = $(this).text(); // string of correct person's name
       var indexToRemove;
       usableData.forEach(function(person, i){ // 
+        console.log(person[0] + " " + person[1] + " " + person);
         if(person[0] === name) {
           indexToRemove = i;
         }
       });
-      console.log("removing " + name);
+      console.log("--------------");
       var removed = usableData.splice(indexToRemove,1);
-      console.log("removed: " + removed);
-      console.log("------");
-      usableData.forEach(function(person){console.log(person[0])});
     }
     total++;
     $(this).css("background-color","#FF0000");
