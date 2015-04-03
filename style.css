@@ -14,3 +14,14 @@ footer {
 .tr-button:first-of-type {
 	margin-top:15px;
 	}
+
+.set-selection {
+	text-align: center;
+}
+.set-selection button {
+	display:inline-block;      
+	margin:0 auto;
+	width: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}

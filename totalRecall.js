@@ -1,6 +1,23 @@
 $( document ).ready(function() {
 
-  var usableData = totalRecall.data.slice(0);
+  totalRecall.sets.forEach(function(val){ // drop a button in .set-selection for every set we have.
+    var $input = $('<input/>', { type: "button", id: val, value: val, class: "tr-selectButton btn btn-default"});
+    $input.appendTo($(".set-selection"));
+  });
+
+$('.tr-selectButton').each(function(){
+  if ( totalRecall.defaultSets.indexOf($(this).attr('id') !== -1)) {
+    $(this).addClass('btn-success').removeClass('btn-default');
+  }
+})
+
+
+  var usableData = [];
+  totalRecall.defaultSets.forEach(function(val){
+    usableData = usableData.concat(totalRecall[val]);
+  })
+
+  var allData = usableData.slice(0);
 
   var correct = newPrompt();
   $('#next').toggle();
@@ -37,10 +54,10 @@ $( document ).ready(function() {
   }
 
   function getRandomPersonFromData(usedIndexes){
-    var index = Math.floor((Math.random() * totalRecall.data.length));
+    var index = Math.floor((Math.random() * allData.length));
     if(usedIndexes.indexOf(index) === -1) {
       usedIndexes.push(index);
-      return totalRecall.data[index];
+      return allData[index];
     } else {
       return getRandomPersonFromData(usedIndexes);
     }
@@ -104,4 +121,11 @@ $( document ).ready(function() {
     $(this).toggle();
   });
 
+  $('.tr-selectButton').click(function(){
+    $(this).toggleClass('btn-success btn-default');
+    usableData = [];
+    $('.tr-selectButton.btn-success').each(function(){
+      usableData = usableData.concat(totalRecall[$(this).attr('id')]);
+    });
+  });
 });

@@ -1,6 +1,7 @@
 var totalRecall = {};
 
-totalRecall.sets = ["hr26","hr27"];
+totalRecall.sets = ["hr26","hr27"]; // all valid sets
+totalRecall.defaultSets = ["hr26","hr27"];  // default sets to load on page load
 totalRecall.hr26 = [
 ["Ansel Rosenberg","http://cdn.defi.co/hr26/scaled/ansel_rosenberg.jpg"],
 ["Cheng Tian","http://cdn.defi.co/hr26/scaled/cheng_tian.jpg"],
@@ -36,7 +37,7 @@ totalRecall.hr26 = [
 ["Sunshine Yin","http://cdn.defi.co/hr26/scaled/sunshine_yin.jpg"],
 ["Yuriy Bash","http://cdn.defi.co/hr26/scaled/yuriy_bash.jpg"]];
 
-var totalRecall.hr27 = [
+totalRecall.hr27 = [
 
 ["Andy Sponring","http://cdn.defi.co/hr27/andy_sponring.jpg"],
 ["Andy Tran","http://cdn.defi.co/hr27/andy_tran.jpg"],
