@@ -1,5 +1,7 @@
 var totalRecall = {};
-totalRecall.data = [
+
+totalRecall.sets = ["hr26","hr27"];
+totalRecall.hr26 = [
 ["Ansel Rosenberg","http://cdn.defi.co/hr26/scaled/ansel_rosenberg.jpg"],
 ["Frank Bowers","http://cdn.defi.co/hr26/scaled/frank_bowers.jpg"],
 ["Kyle Shockey","http://cdn.defi.co/hr26/scaled/kyle_shockey.jpg"],
@@ -33,3 +35,43 @@ totalRecall.data = [
 ["Faye Guo","http://cdn.defi.co/hr26/scaled/faye_guo.jpg"],
 ["Kyle Hilton","http://cdn.defi.co/hr26/scaled/kyle_hilton.jpg"],
 ["Yuriy Bash","http://cdn.defi.co/hr26/scaled/yuriy_bash.jpg"]];
+
+var totalRecall.hr27 = [
+
+["Andy Sponring","http://cdn.defi.co/hr27/andy_sponring.jpg"],
+["Andy Tran","http://cdn.defi.co/hr27/andy_tran.jpg"],
+["Anuj Tomar","http://cdn.defi.co/hr27/anuj_tomar.jpg"],
+["Austin Liu","http://cdn.defi.co/hr27/austin_liu.jpg"],
+["Brant Choate","http://cdn.defi.co/hr27/brant_choate.jpg"],
+["Brian Liu","http://cdn.defi.co/hr27/brian_liu.jpg"],
+["Charlie Hwang","http://cdn.defi.co/hr27/charlie_hwang.jpg"],
+["Dave Grundfest","http://cdn.defi.co/hr27/dave_grundfest.jpg"],
+["David Hopper","http://cdn.defi.co/hr27/david_hopper.jpg"],
+["David Trinh","http://cdn.defi.co/hr27/david_trinh.jpg"],
+["Derek Sakamoto","http://cdn.defi.co/hr27/derek_sakamoto.jpg"],
+["Eddie Kong","http://cdn.defi.co/hr27/eddie_kong.jpg"],
+["Irfan Baqui","http://cdn.defi.co/hr27/irfan_baqui.jpg"],
+["Johnny Nguyen","http://cdn.defi.co/hr27/johnny_nguyen.jpg"],
+["John Winstead","http://cdn.defi.co/hr27/john_winstead.jpg"],
+["John Yeglinski","http://cdn.defi.co/hr27/john_yeglinski.jpg"],
+["Joseph Lin","http://cdn.defi.co/hr27/joseph_lin.jpg"],
+["Justin Webb","http://cdn.defi.co/hr27/justin_webb.jpg"],
+["Katrina Uychaco","http://cdn.defi.co/hr27/katrina_uychaco.jpg"],
+["Kevin Huang","http://cdn.defi.co/hr27/kevin_huang.jpg"],
+["Kurt Bartholemew","http://cdn.defi.co/hr27/kurt_bartholomew.jpg"],
+["Lauren Spiegel","http://cdn.defi.co/hr27/lauren_spiegel.jpg"],
+["Lu Yin","http://cdn.defi.co/hr27/lu_yin.jpg"],
+["Mark Bennett","http://cdn.defi.co/hr27/mark_bennett.jpg"],
+["Mark Tausch","http://cdn.defi.co/hr27/mark_tausch.jpg"],
+["Melanie Gin","http://cdn.defi.co/hr27/melanie_gin.jpg"],
+["Michael Aristarkhov","http://cdn.defi.co/hr27/michael_aristarkhov.jpg"],
+["Mike Harris","http://cdn.defi.co/hr27/mike_harris.jpg"],
+["Mike Yao","http://cdn.defi.co/hr27/mike_yao.jpg"],
+["Nathan Bailey","http://cdn.defi.co/hr27/nathan_bailey.jpg"],
+["Nimi Dharithreesan","http://cdn.defi.co/hr27/nimi_dharithreesan.jpg"],
+["Ron Tsui","http://cdn.defi.co/hr27/ron_tsui.jpg"],
+["Steven Shyun","http://cdn.defi.co/hr27/steven_shyun.jpg"],
+["Vince Tam","http://cdn.defi.co/hr27/vince_tam.jpg"],
+["Vivek Tumrukota","http://cdn.defi.co/hr27/vivek_tumrukota.jpg"],
+["Zach Fischmann","http://cdn.defi.co/hr27/zack_fischmann.jpg"]
+];
