@@ -10,65 +10,65 @@
 
   <!-- Title and score section -->
   <div class="container">
-        <h1>Total Recall</h1>
+    <h1>Total Recall</h1>
     <div class="row">
-    <div class="col-sm-12 col-md-6 col-md-offset-3 set-selection">
-    </div></div>
-    <div id="gameplay">
-      <div class="row" style="text-align:center">
-      <div class="col-md-6 col-md-offset-3 col-sm-12">
-        <h3 class='score'>Score: 0 out of 0</h3>
-        <img class="img-square" src="" style="width: 100%;">
+      <div class="col-sm-12 col-md-6 col-md-offset-3 set-selection">
+      </div></div>
+      <div id="gameplay">
+        <div class="row" style="text-align:center">
+          <div class="col-md-6 col-md-offset-3 col-sm-12">
+            <h3 class='score'>Score: 0 out of 0</h3>
+            <img class="img-square" src="" style="width: 100%;">
+          </div>
+        </div>
+
+        <!-- Section for answer buttons-->
+        <div class="row padding-md-top">
+          <div class="col-md-4 col-md-offset-4 col-sm-12">
+            <button type="button" class="btn btn-default btn-lg btn-block tr-button" id="1"></button>
+            <button type="button" class="btn btn-default btn-lg btn-block tr-button" id="2"></button>
+            <button type="button" class="btn btn-default btn-lg btn-block tr-button" id="3"></button>
+            <br>
+            <button type="button" class="btn btn-primary btn-block" id="next">Next</button>
+          </div>
         </div>
       </div>
 
-    <!-- Section for answer buttons-->
-    <div class="row padding-md-top">
-      <div class="col-md-4 col-md-offset-4 col-sm-12">
-        <button type="button" class="btn btn-default btn-lg btn-block tr-button" id="1"></button>
-        <button type="button" class="btn btn-default btn-lg btn-block tr-button" id="2"></button>
-        <button type="button" class="btn btn-default btn-lg btn-block tr-button" id="3"></button>
-        <br>
-        <button type="button" class="btn btn-primary btn-block" id="next">Next</button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- end of game -->
-  <div id="endgame" style="display:none;">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <h3>Final score: </h3>
-        <h1 id="finalScore"></h1><br>
-        <button class="btn btn-primary btn-lg" id="playAgainButton">Play again?</button>
+      <!-- end of game -->
+      <div id="endgame" style="display:none;">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h3>Final score: </h3>
+            <h1 id="finalScore"></h1><br>
+            <button class="btn btn-primary btn-lg" id="playAgainButton">Play again?</button>
+          </div>
         </div>
       </div>
-    </div>
-  
+      </div>
 
 
-  <!-- Scripts at the bottom (good practice, eh?)-->
-  <script src="data.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="totalRecall.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      <!-- Scripts at the bottom (good practice, eh?)-->
+      <script src="data.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      <script src="totalRecall.js"></script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-57196062-2', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-57196062-2', 'auto');
+        ga('send', 'pageview');
 
-  </script>
-  <!-- End Piwik Code -->
+      </script>
+      <!-- End Piwik Code -->
 
 
-</body>
-<hr>
-<footer class="text-center">
-  TotalRecall v0.2.1<br> <a href="http://github.com/kyleshockey/TotalRecall">Contribute on GitHub</a> <br>  <a href="https://github.com/kyleshockey/TotalRecall/issues/new" style="color:red;">File a Bug</a>
-</footer>
+    </body>
+    <hr>
+    <footer class="text-center">
+      TotalRecall v0.2.1<br> <a href="http://github.com/kyleshockey/TotalRecall">Contribute on GitHub</a> <br>  <a href="https://github.com/kyleshockey/TotalRecall/issues/new" style="color:red;">File a Bug</a>
+    </footer>
 
-</html>
+    </html>
