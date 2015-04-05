@@ -123,6 +123,9 @@ $('.tr-selectButton').each(function(){
 
   $('.tr-selectButton').click(function(){
     $(this).toggleClass('btn-success btn-default');
+    score = 0;
+    total = 0;
+    $('.score').text(score + ' out of ' + total);
     usableData = [];
     $('.tr-selectButton.btn-success').each(function(){
       usableData = usableData.concat(totalRecall[$(this).attr('id')]);
