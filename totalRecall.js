@@ -24,9 +24,30 @@ $('.tr-selectButton').each(function(){
   var score = 0, total = 0;
 
   function newPrompt(){
+    function getRandomPerson(){
+      var index = Math.floor((Math.random() * usableData.length));
+      if(usedIndexes.indexOf(index) === -1) {
+        usedIndexes.push(index);
+        return usableData[index];
+      } else {
+        return getRandomPerson();
+      }
+    }
+
+    function getRandomPersonFromData(){
+      var index = Math.floor((Math.random() * allData.length));
+      if(usedIndexes.indexOf(index) === -1) {
+        usedIndexes.push(index);
+        return allData[index];
+      } else {
+        return getRandomPersonFromData();
+      }
+    }
+
+
     var usedIndexes = [];
     var correctIndex = Math.ceil(Math.random() * 3);
-    var person = getRandomPerson(usedIndexes);
+    var person = getRandomPerson();
     $('.img-square').attr("src", person[1]);
     $('#' + correctIndex).text(person[0]);
 
@@ -36,32 +57,14 @@ $('.tr-selectButton').each(function(){
       //make sure you don't overwrite the button with the correct answer
       if (i !== correctIndex){
         //populate buttons
-        var person = getRandomPersonFromData(usedIndexes);
+        var person = getRandomPersonFromData();
         $('#' + i).text(person[0]);
       }
     }
+    console.log()
     return correctIndex;
   };
 
-  function getRandomPerson(usedIndexes){
-    var index = Math.floor((Math.random() * usableData.length));
-    if(usedIndexes.indexOf(index) === -1) {
-      usedIndexes.push(index);
-      return usableData[index];
-    } else {
-      return getRandomPerson(usedIndexes);
-    }
-  }
-
-  function getRandomPersonFromData(usedIndexes){
-    var index = Math.floor((Math.random() * allData.length));
-    if(usedIndexes.indexOf(index) === -1) {
-      usedIndexes.push(index);
-      return allData[index];
-    } else {
-      return getRandomPersonFromData(usedIndexes);
-    }
-  }
   //Event handler for clicking on button. Update scores, calls paintButtons method.
   $('.btn.btn-default.btn-lg.btn-block').click(function(){
     if ($(this).attr('id') === correct.toString()){
@@ -69,12 +72,10 @@ $('.tr-selectButton').each(function(){
       var name = $(this).text(); // string of correct person's name
       var indexToRemove;
       usableData.forEach(function(person, i){ // 
-        console.log(person[0] + " " + person[1] + " " + person);
         if(person[0] === name) {
           indexToRemove = i;
         }
       });
-      console.log("--------------");
       var removed = usableData.splice(indexToRemove,1);
     }
     total++;
