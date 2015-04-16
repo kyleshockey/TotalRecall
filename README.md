@@ -9,7 +9,7 @@
 
 There's no need to clone down this repo in order to play! [**Click here to play Total Recall**.](http://tr.kyleshockey.com/) 
 
-The hosted version of TotalRecall is running the [most recent release](https://github.com/kyleshockey/TotalRecall/releases/latest) of TotalRecall, with a default dataset of [Hack Reactor](http://hackreactor.com)'s HR26 and HR27 cohorts.
+The hosted version of TotalRecall is running the [most recent release](https://github.com/kyleshockey/TotalRecall/releases/latest) of TotalRecall, with a default dataset of [Hack Reactor](http://hackreactor.com)'s HR24, HR26 and HR27 cohorts.
 
 ### Gameplay
 
@@ -19,7 +19,7 @@ Score is kept as you play and is always visible! You can also change your active
 
 ### Configuration
 
-Total Recall data sets are an array of tuples, where `tuple[0]` is a character's name, and `tuple[1]` is an absolute URL to the character's photo. For best performance and presentation, use ~700x464 progressive JPEG images. [ImageMagick](http://www.imagemagick.org) is great for making these transformations.
+Total Recall data sets are an array of tuples, where `tuple[0]` is a character's name, and `tuple[1]` is an absolute URL to the character's photo. For best performance and presentation, use ~700x464 progressive JPEG images. [ImageMagick](http://www.imagemagick.org) is great for making these transformations- there's a script included in [/util](https://github.com/kyleshockey/TotalRecall/tree/master/util) that is a good example of how to approach this.
 
 
 
