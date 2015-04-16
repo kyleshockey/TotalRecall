@@ -1,7 +1,40 @@
 var totalRecall = {};
 
-totalRecall.sets = ["hr26","hr27"]; // all valid sets
-totalRecall.defaultSets = ["hr26","hr27"];  // default sets to load on page load
+totalRecall.sets = ["hr24","hr26","hr27"]; // all valid sets
+totalRecall.defaultSets = ["hr24","hr26","hr27"];  // default sets to load on page load
+
+totalRecall.hr24 = [
+["Anneke Floor","http://cdn.defi.co/hr24/annekefloor.jpg"],
+["Bradley Heinz","http://cdn.defi.co/hr24/bradleyheinz.jpg"],
+["Chad Fong","http://cdn.defi.co/hr24/chadfong.jpg"],
+["Chris Rinaldi","http://cdn.defi.co/hr24/chrisrinaldi.jpg"],
+["Conor Flannigan","http://cdn.defi.co/hr24/conorflannigan.jpg"],
+["Danny Delott","http://cdn.defi.co/hr24/dannydelott.jpg"],
+["David Hammer","http://cdn.defi.co/hr24/davidhammer.jpg"],
+["David Rabkin","http://cdn.defi.co/hr24/davidrabkin.jpg"],
+["Dennis Yang","http://cdn.defi.co/hr24/dennisyang.jpg"],
+["Derek Van Dyke","http://cdn.defi.co/hr24/derekvandyke.jpg"],
+["Garrett Cox","http://cdn.defi.co/hr24/garrettcox.jpg"],
+["Jason Chang","http://cdn.defi.co/hr24/jasonchang.jpg"],
+["Jason Ly","http://cdn.defi.co/hr24/jasonly.jpg"],
+["John Kosmicke","http://cdn.defi.co/hr24/johnkosmicke.jpg"],
+["Julia Nething","http://cdn.defi.co/hr24/julianething.jpg"],
+["Kalev Roomann-Kurrik","http://cdn.defi.co/hr24/kalevroomann-kurrik.jpg"],
+["Mark Macdonald","http://cdn.defi.co/hr24/markmacdonald.jpg"],
+["Mark Marcantano","http://cdn.defi.co/hr24/markmarcantano.jpg"],
+["Michael Hari","http://cdn.defi.co/hr24/michaelhari.jpg"],
+["Michael Roberts","http://cdn.defi.co/hr24/michaelroberts.jpg"],
+["Noah Sluss","http://cdn.defi.co/hr24/noahsluss.jpg"],
+["Robert Zheng","http://cdn.defi.co/hr24/robertzheng.jpg"],
+["Scott Kao","http://cdn.defi.co/hr24/scottkao.jpg"],
+["Stephanie Higa","http://cdn.defi.co/hr24/stephaniehiga.jpg"],
+["Steve Webster","http://cdn.defi.co/hr24/stevewebster.jpg"],
+["Thomas Treffry","http://cdn.defi.co/hr24/thomastreffry.jpg"],
+["Tony Johnson","http://cdn.defi.co/hr24/tonyjohnson.jpg"],
+["Wendy Leung","http://cdn.defi.co/hr24/wendyleung.jpg"],
+["Will Wung","http://cdn.defi.co/hr24/willwung.jpg"]
+];
+
 totalRecall.hr26 = [
 ["Ansel Rosenberg","http://cdn.defi.co/hr26/scaled/ansel_rosenberg.jpg"],
 ["Cheng Tian","http://cdn.defi.co/hr26/scaled/cheng_tian.jpg"],
